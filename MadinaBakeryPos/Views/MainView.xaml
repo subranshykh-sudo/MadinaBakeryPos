@@ -1,0 +1,32 @@
+﻿<controls:MetroWindow
+    x:Class="MadinaBakeryPos.Views.MainView"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:controls="http://metro.mahapps.com/winfx/xaml/controls"
+    xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+    xmlns:prism="http://prismlibrary.com/"
+    Title="AL Madina Bakery"
+    TitleBarHeight="80"
+    Width="1100"
+    Height="700"
+    WindowStartupLocation="CenterScreen">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition x:Name="SidebarColumn" Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- SIDEBAR -->
+        <ContentControl prism:RegionManager.RegionName="SidebarRegion" />
+
+
+
+
+        <!-- MAIN CONTENT -->
+        <Grid Grid.Column="1" Background="#F5F5F5">
+            <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        </Grid>
+
+    </Grid>
+</controls:MetroWindow>
